@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Rockwell Extra Bold';
+    
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #bad4f3;
+}
+
+.container {
+    width: 700px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    font-size: 25px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;    
+}
+
+.question {
+    font-weight: bolder;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 0.1rem solid rgb(131, 177, 247);
+    background-color: rgb(3, 38, 66);
+    margin-bottom: 1rem;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    color: rgb(35, 152, 219);
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(10, 10, 10, 0.5);
+    transform: translateY(-0.1rem);    
+    transition: transform 150ms;
+}
+
+.btn.correct {
+    background-color: green;
+    color: white;
+}
+
+.btn.wrong {
+    background-color: red;
+    color: white;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
